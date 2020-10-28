@@ -1,0 +1,19 @@
+import random
+
+secret = random.randint(1,100)
+
+while True:
+    guess = None
+    count = 1
+
+    while guess != secret:
+        guess = input('please type a number between 1 and 100: ')
+        if guess.isdigit():
+            guess = int(guess)
+        if guess == secret:
+            print('Correct')
+        else:
+            print('try again')
+            count +=1
+
+    print('it took you', count, 'guesses')
